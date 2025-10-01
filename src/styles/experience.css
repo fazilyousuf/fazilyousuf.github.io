@@ -105,13 +105,31 @@
 /* Responsive */
 @media (max-width: 768px) {
   .experience-container {
-    grid-template-columns: 1fr; /* single column on mobile */
+    grid-template-columns: 1fr; /* single column */
   }
 
   .experience-card {
-    min-height: 120px;
+    flex-direction: column;   /* stack left + right vertically */
+    align-items: flex-start;  /* align to left */
+    min-height: auto;         /* allow natural height */
+  }
+
+  .exp-left {
+    min-width: auto;          /* remove fixed width */
+    width: 100%;              /* take full width */
+    text-align: left;         /* align text properly */
+    margin-bottom: 8px;       /* spacing from right section */
+  }
+
+  .exp-right h3 {
+    font-size: 1.1rem;        /* slightly smaller for mobile */
+  }
+
+  .exp-right p {
+    font-size: 1rem;
   }
 }
+
 .experience-section.collapsed .experience-container {
   max-height: 0;
   overflow: hidden;
