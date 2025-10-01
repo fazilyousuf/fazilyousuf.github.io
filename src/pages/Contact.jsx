@@ -5,10 +5,11 @@ import projectLogo from "@/assets/project.png";
 import img1 from "@/assets/profile/Profile.jpg";
 import img2 from "@/assets/profile/Profile2.jpg";
 import img3 from "@/assets/profile/Profile3.jpg";
+import img4 from "@/assets/profile/Profile4.jpg";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const images = [img1, img2, img3];
+  const images = [img4,img1, img2, img3 ];
   const [current, setCurrent] = useState(0);
 
   const [formData, setFormData] = useState({

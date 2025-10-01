@@ -70,6 +70,12 @@
     flex-direction: column;
     gap: 24px;
     text-align: center;
+    align-items: center; /* ensure items are centered */
+  }
+
+  .home-left {
+    padding-left: 0; /* remove left padding on mobile */
+    padding-right: 0; /* optional: remove right padding */
   }
 
   .home-left h1 {

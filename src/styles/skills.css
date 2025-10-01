@@ -70,3 +70,27 @@
   color: rgba(255,255,255,0.9);
   font-weight: 500;
 }
+/* Mobile responsive: 3 skills per row */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on mobile */
+    gap: 16px; /* optional: smaller gap for mobile */
+  }
+
+  .skill-card {
+    padding: 16px; /* slightly smaller cards on mobile */
+  }
+
+  .skill-icon img {
+    width: 40px; /* smaller icons */
+    height: 40px;
+  }
+
+  .skill-percent {
+    font-size: 1rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+}
