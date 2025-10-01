@@ -1,0 +1,72 @@
+.skills-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 64px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #0ae8d2;
+  margin-bottom: 48px;
+  font-weight: 600;
+}
+
+/* Grid layout instead of vertical */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1000px; /* center limit */
+}
+
+/* Individual skill card */
+.skill-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(10, 232, 210, 0.2);
+}
+
+/* Skill icon */
+.skill-icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+  object-fit: contain; /* makes svg fit properly */
+  display: block;
+}
+
+/* Skill percent */
+.skill-percent {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0ae8d2;
+  margin-bottom: 8px;
+}
+
+/* Skill name */
+.skill-name {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}

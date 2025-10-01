@@ -1,0 +1,124 @@
+.education-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 64px 32px;
+  transition: all 0.3s ease;
+}
+
+.education-section.collapsed {
+  min-height: 60vh;
+}
+
+/* Header with text left, icon right */
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.education-header h2 {
+  font-size: 2rem;
+  color: #0ae8d2;
+  margin-left: 16px;
+}
+
+.toggle-btn {
+  background: none;
+  border: 2px solid #0ae8d2;
+  color: #0ae8d2;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #0ae8d2;
+  color: #000;
+}
+
+/* Education containers */
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 32px;
+}
+
+/* Individual card */
+.education-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 140px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(10, 232, 210, 0.2);
+}
+
+/* Left section: year/period */
+.edu-left {
+  background: rgba(10, 232, 210, 0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 600;
+  color: #0ae8d2;
+  flex-shrink: 0;
+}
+
+/* Right section: degree & institution */
+.edu-right {
+  flex: 1;
+}
+
+.edu-right h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.edu-right p {
+  margin: 4px 0 0 0;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-container {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .education-card {
+    min-height: 120px;
+  }
+}
+.education-section.collapsed .education-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.education-section.collapsed {
+  min-height: 0; 
+  padding-top: 0;
+  padding-bottom: 0;
+}

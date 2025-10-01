@@ -1,0 +1,169 @@
+.navbar {
+  position: relative; 
+  background: #000;
+  color: #fff;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index: 50;
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;       /* vertical alignment */
+  justify-content: center;   /* ✅ horizontal alignment */
+}
+
+.nav-item {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px 4px;
+  display: inline-block;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  opacity: 0.9;
+  /* text-decoration: underline; */
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .nav-list {
+    gap: 12px;
+  }
+  .nav-item {
+    font-size: 0.95rem;
+  }
+}
+
+/* Optional: fixed navbar */
+.navbar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+/* Left number + location */
+.navbar-left {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  color: #0ae8d2;
+  font-size: 0.9rem;
+}
+
+.navbar-left .contact-number {
+  font-weight: 600;
+}
+
+.navbar-left .location {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+/* Right connect button */
+.navbar-right {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.connect-btn {
+  padding: 6px 16px;
+  background: #0ae8d2;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.connect-btn:hover {
+  background: rgba(10, 232, 210, 0.8);
+  transform: translateY(-2px);
+}
+/* Hamburger (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0ae8d2;
+  z-index: 60;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;              
+  background: #000;          
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;         /* larger text for mobile */
+  font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .nav-list,
+  .navbar-right {
+    display: none; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+  .navbar {
+    padding: 40px 16px;  
+  }
+}

@@ -1,0 +1,22 @@
+.rotating-word {
+  display: inline-block;
+  margin-left: 5px;  
+  transform-origin: bottom center;
+  animation: rotateWord 4s ease-in-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes rotateWord {
+  0% {
+    transform: rotateX(-90deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateX(10deg) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+}
