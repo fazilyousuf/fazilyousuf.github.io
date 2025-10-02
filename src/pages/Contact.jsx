@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "@/styles/Contact.css";
+import "@/styles/contact.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import projectLogo from "@/assets/project.png"; 
 import img1 from "@/assets/profile/Profile.jpg";
