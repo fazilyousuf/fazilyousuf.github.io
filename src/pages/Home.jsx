@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/home.css";
+import "@/styles/home_temp.css";
 import profileImg from "@/assets/profile/Profile2.jpg";
 import RotatingWords from "@/components/RotatingWords";
 
