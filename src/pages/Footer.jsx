@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "@/styles/footer.css";
 import { FaLinkedin, FaGithub, FaInstagram, FaArrowUp } from "react-icons/fa";
 
 const Footer = () => {
+
+  const [visits, setVisits] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/visits")
+      .then(res => res.json())
+      .then(data => setVisits(data.visits))
+      .catch(() => setVisits("—"));
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -61,6 +71,7 @@ const Footer = () => {
             <FaInstagram />
           </a>
         </div>
+        <p className="footer-visits">Total page visits: {visits ?? "Loading..."}</p>
       </div>
 
       {/* Back to top button */}

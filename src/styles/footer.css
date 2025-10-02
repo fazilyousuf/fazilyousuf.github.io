@@ -113,3 +113,8 @@
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(10, 232, 210, 0.3);
 }
+.footer-visits {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.95rem;
+}
