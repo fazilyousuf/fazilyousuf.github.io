@@ -1,6 +1,6 @@
 import React from "react";
 import "@/styles/home.css";
-import profileImg from "@/assets/profile/profile2.jpg";
+import profileImg from "@/assets/profile/Profile2.jpg";
 import RotatingWords from "@/components/RotatingWords";
 
 const Home = () => {
