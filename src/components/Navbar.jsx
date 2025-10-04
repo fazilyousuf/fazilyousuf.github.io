@@ -11,7 +11,15 @@ const Navbar = () => {
     <nav className="navbar" aria-label="Primary">
       {/* Left side: number + Dubai */}
       <div className="navbar-left">
-        <p className="contact-number">+971 52 595 9413</p>
+        <a 
+  href="https://wa.me/971525959413" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="contact-number"
+>
+  +971 52 595 9413
+</a>
+
         <span className="location">Dubai</span>
       </div>
 

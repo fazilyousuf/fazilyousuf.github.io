@@ -167,3 +167,24 @@
     padding: 40px 16px;  
   }
 }
+.contact-number {
+  color: #0ae8d2;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.contact-number::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: #0ae8d2;
+  transition: width 0.3s ease;
+}
+
+.contact-number:hover::after {
+  width: 100%;
+}
