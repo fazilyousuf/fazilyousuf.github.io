@@ -1,0 +1,9 @@
+{
+  "programming_languages": ["Python", "JavaScript", "Java (Basic)", "SQL", "C"],
+  "frameworks": ["Django", "Flask", "Node.js", "Express.js"],
+  "frontend": ["React", "Vite", "Redux", "HTML", "CSS", "Bootstrap"],
+  "libraries": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+  "tools": ["Git", "Postman", "VS Code", "Jupyter Notebook", "MongoDB"],
+  "data_science": ["Data Preprocessing", "Data Visualization", "Machine Learning", "NLP"],
+  "soft_skills": ["Teamwork", "Collaboration", "Problem-solving", "Quick Learning", "Communication"]
+}

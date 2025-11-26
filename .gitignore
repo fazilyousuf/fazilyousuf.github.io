@@ -25,3 +25,8 @@ dist-ssr
 # Local env files
 .env.local
 .vercel
+backend/.env
+
+# Python / backend
+backend/venv
+__pycache__

@@ -1,0 +1,44 @@
+[
+  {
+    "company": "GreenCreon LLP Software Solutions",
+    "role": "Junior React Developer",
+    "location": "Remote",
+    "start": "Aug 2025",
+    "end": "Oct 2025",
+    "responsibilities": [
+      "Worked as a part-time Frontend Developer on in-house billing software using React with Vite.",
+      "Mentored interns and guided them on frontend development best practices.",
+      "Developed UI components, implemented routing and state management.",
+      "Integrated backend APIs and optimized frontend performance.",
+      "Built dynamic interfaces with Redux and modern React patterns."
+    ]
+  },
+  {
+    "company": "Datavalley Web Services",
+    "role": "Fullstack Developer (Python)",
+    "location": "Kochi, Kerala, India",
+    "start": "Oct 2024",
+    "end": "Sep 2025",
+    "responsibilities": [
+      "Built and maintained backend services and RESTful APIs using Python, Django, and Flask.",
+      "Developed responsive, scalable UIs using React.js and Vite.",
+      "Implemented Redux for state management and improved UI performance.",
+      "Followed Agile/Scrum processes, participated in planning, stand-ups, and code reviews.",
+      "Worked with Git version control and CI/CD pipelines."
+    ]
+  },
+  {
+    "company": "iDatalytics",
+    "role": "Data Science Intern",
+    "location": "Kochi, Kerala, India",
+    "start": "Nov 2024",
+    "end": "Feb 2025",
+    "responsibilities": [
+      "Worked with Python, NumPy, Pandas, and Scikit-learn for data analysis and model building.",
+      "Created visualizations using Matplotlib and Seaborn.",
+      "Trained and deployed machine learning models for predictive analytics.",
+      "Utilized TensorFlow, MediaPipe, OpenCV, and NLTK for deep learning and NLP.",
+      "Deployed ML models using Flask APIs."
+    ]
+  }
+]

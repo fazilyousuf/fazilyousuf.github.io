@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Python Full Stack",
+    "organization": "QSpiders",
+    "duration": "6 Months",
+    "details": [
+      "Training in Python full-stack development using Django.",
+      "Learned front-end and back-end integration.",
+      "Worked on database management and web application architecture."
+    ]
+  },
+  {
+    "title": "IBM Data Science Professional Certificate",
+    "organization": "Coursera",
+    "skills_learned": [
+      "Python, SQL, Pandas, Jupyter, Data Analysis, Visualization",
+      "APIs, BeautifulSoup, Machine Learning"
+    ]
+  },
+  {
+    "title": "Introduction to Data Analytics",
+    "organization": "Meta",
+    "skills_learned": ["Data extraction", "Cleaning", "Manipulation", "OSEMN Cycle"]
+  },
+  {
+    "title": "Foundations of Data Science: K-Means Clustering in Python",
+    "organization": "University of London",
+    "skills_learned": [
+      "Data clustering workflows",
+      "K-Means algorithm",
+      "Cluster analysis interpretation"
+    ]
+  },
+  {
+    "title": "Database Management System",
+    "organization": "NPTEL"
+  },
+  {
+    "title": "Programming in Java",
+    "organization": "NPTEL"
+  },
+  {
+    "title": "Programming in C and C++",
+    "organization": "Keltron Knowledge Centre"
+  }
+]

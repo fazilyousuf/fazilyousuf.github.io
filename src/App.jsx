@@ -7,6 +7,7 @@ import Education from "@/pages/Education";
 import Skills from "@/pages/Skills";
 import Contact from "@/pages/Contact";
 import Footer from "@/pages/Footer";
+import Chatbot from "@/components/Chatbot";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Contact />
         <Footer />
       </main>
+      <Chatbot />
     </div>
   )
 }

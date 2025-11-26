@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Falcon 9 Landing Prediction",
+    "description": "Capstone project: predicted Falcon 9 first stage landing success using data wrangling, feature engineering, and machine learning models.",
+    "tech_stack": ["Python", "Pandas", "Scikit-learn", "SQL", "Plotly", "Jupyter", "APIs"],
+    "features": [""]
+  },
+  {
+    "title": "Stock vs Revenue Dashboard",
+    "description": "Compared Tesla and GameStop stock prices with revenue using web scraping and interactive dashboards.",
+    "tech_stack": ["Python", "Pandas", "BeautifulSoup", "Plotly", "Dashboards"],
+    "features": [""]
+  },
+  {
+    "title": "IncTra  Personal Budget Tracker",
+    "description": "A full-stack budget management system built using React and Django REST Framework. Allows users to track income, expenses, budgets, and financial insights.",
+    "tech_stack": ["React", "Django REST Framework", "D3.js", "SQLite3", "Token-based authentication"],
+    "features": [
+      "Interactive dashboards with D3.js visualizations.",
+      "Monthly budget allocation vs actual spending comparison.",
+      "Daily income/expense graph for 5-day periods.",
+      "CRUD operations for transaction management.",
+      "Category-wise budget limits with progress tracking."
+    ]
+  },
+  {
+    "title": "Interview Proctoring System",
+    "description": "A monitoring system to ensure fairness in online interviews using computer vision and deep learning.",
+    "tech_stack": ["MediaPipe", "OpenCV", "TensorFlow", "Flask", "HTML/CSS"],
+    "features": [
+      "Face and multiple-face detection using MediaPipe Face Mesh.",
+      "Eye movement and lip movement detection for candidate verification.",
+      "Real-time anomaly detection and logging.",
+      "Custom-trained ML model detecting phones and smartwatches with 85% accuracy.",
+      "Deployed backend with Flask; frontend being migrated to React."
+    ]
+  },
+  {
+    "title": "Scientific Literature Summarizer",
+    "description": "NLP-based application for generating concise summaries of research papers.",
+    "tech_stack": ["Python", "NLP", "BERT", "MongoDB", "Flask", "HTML/CSS"],
+    "features": [
+      "Advanced text preprocessing and summarization pipeline.",
+      "BERT-based summary generation.",
+      "Flask backend with interactive web UI.",
+      "Database integration for storing documents and summaries."
+    ]
+  },
+  {
+    "title": "Portal for Agribusiness",
+    "description": "Platform enabling direct farmer-to-consumer market interactions.",
+    "tech_stack": ["Django", "SQLite3", "HTML", "CSS", "JavaScript"],
+    "features": [
+      "MVC architecture using Django.",
+      "Dynamic product, user, and order management.",
+      "Secure product listing and purchasing workflow."
+    ]
+  }
+]
