@@ -60,7 +60,7 @@ async def chat(request: ChatRequest):
         )
 
     # 3) PRICING / DEVELOPMENT INQUIRIES (no LLM)
-    pricing_keywords = ["price", "cost", "charge", "charges", "rate", "fees", "budget"]
+    pricing_keywords = ["price", "cost", "charge", "charges", "fees", "budget"]
     dev_keywords = ["build", "create", "build a website", "build an app"]
 
     if any(word in normalized for word in pricing_keywords) or any(

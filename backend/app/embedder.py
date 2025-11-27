@@ -1,25 +1,32 @@
 from typing import List
-from sentence_transformers import SentenceTransformer
-import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load a small, fast model (CPU-friendly)
-_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-
-_model: SentenceTransformer | None = None
+_vectorizer: TfidfVectorizer | None = None
 
 
-def get_model() -> SentenceTransformer:
-    global _model
-    if _model is None:
-        _model = SentenceTransformer(_MODEL_NAME)
-    return _model
-
-
-def embed_texts(texts: List[str]) -> np.ndarray:
+def fit_vectorizer(texts: List[str]) -> None:
     """
-    Embed a list of texts into vectors using a local transformer model.
-    Returns a numpy array of shape (n_texts, dim).
+    Fit a single global TfidfVectorizer on all knowledge base texts.
     """
-    model = get_model()
-    embeddings = model.encode(texts, show_progress_bar=False, convert_to_numpy=True)
-    return embeddings
+    global _vectorizer
+    _vectorizer = TfidfVectorizer().fit(texts)
+
+
+def transform_corpus(texts: List[str]):
+    """
+    Transform all corpus texts to a TF-IDF matrix.
+    Returns a sparse matrix of shape (n_docs, vocab_size).
+    """
+    if _vectorizer is None:
+        raise RuntimeError("Vectorizer is not fitted. Call fit_vectorizer() first.")
+    return _vectorizer.transform(texts)
+
+
+def transform_query(text: str):
+    """
+    Transform a single query string to a TF-IDF vector.
+    Returns a sparse matrix of shape (1, vocab_size).
+    """
+    if _vectorizer is None:
+        raise RuntimeError("Vectorizer is not fitted. Call fit_vectorizer() first.")
+    return _vectorizer.transform([text])

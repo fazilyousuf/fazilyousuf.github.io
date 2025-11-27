@@ -1,54 +1,69 @@
-from typing import List, Tuple
+from typing import List
 import numpy as np
-from scipy.spatial.distance import cdist
+from sklearn.metrics.pairwise import cosine_similarity
 
 from .chunker import load_all_chunks, Chunk
-from .embedder import embed_texts
+from .embedder import fit_vectorizer, transform_corpus, transform_query
 
 _chunks: List[Chunk] = []
-_chunk_embeddings: np.ndarray | None = None
+_doc_matrix = None  # TF-IDF matrix for all chunks
 
 
 def initialize_knowledge_base():
     """
-    Load all chunks and compute their embeddings once at startup.
+    Load all chunks and compute their TF-IDF representations once at startup.
     """
-    global _chunks, _chunk_embeddings
+    global _chunks, _doc_matrix
     _chunks = load_all_chunks()
     texts = [c.text for c in _chunks]
+
     if texts:
-        _chunk_embeddings = embed_texts(texts)
+        fit_vectorizer(texts)
+        _doc_matrix = transform_corpus(texts)
     else:
-        _chunk_embeddings = np.zeros((0, 384))  # default dimension for MiniLM
-    print(f"Knowledge base initialized with {len(_chunks)} chunks.")
+        _doc_matrix = None
+
+    print(f"Knowledge base initialized with {len(_chunks)} chunks (TF-IDF).")
 
 
 def get_relevant_chunks(query: str, top_k: int = 4) -> List[Chunk]:
     """
-    Given a query, return the top_k most relevant chunks using cosine similarity.
+    Given a query, return the top_k most relevant chunks using cosine similarity
+    over TF-IDF vectors.
     """
-    global _chunks, _chunk_embeddings
+    global _chunks, _doc_matrix
 
-    if _chunk_embeddings is None or len(_chunks) == 0:
+    if _doc_matrix is None or not _chunks:
         return []
 
-    query_vec = embed_texts([query])  # shape (1, dim)
+    query_vec = transform_query(query)  # shape (1, vocab_size)
+    sims = cosine_similarity(query_vec, _doc_matrix)[0]  # shape (n_chunks,)
 
-    # cosine distance; 1 - cosine_similarity
-    distances = cdist(query_vec, _chunk_embeddings, metric="cosine")[0]  # shape (n_chunks,)
-    indices = np.argsort(distances)[:top_k]
-
+    # sort by similarity descending
+    indices = np.argsort(-sims)[:top_k]
     return [_chunks[i] for i in indices]
 
 
-def build_context_for_query(query: str, top_k: int = 4) -> str:
+def build_context_for_query(query: str, top_k: int = 4, max_chars: int = 600) -> str:
     """
     Retrieve relevant chunks and format them as context text.
+    Limit total length to reduce token usage.
     """
     chunks = get_relevant_chunks(query, top_k=top_k)
     if not chunks:
         return ""
+
     parts = []
+    total = 0
+
     for c in chunks:
-        parts.append(f"[Source: {c.source}] {c.text}")
+        text = c.text.strip()
+        # truncate each chunk if too long
+        if len(text) > 300:
+            text = text[:300] + "..."
+        if total + len(text) > max_chars:
+            break
+        parts.append(f"[Source: {c.source}] {text}")
+        total += len(text)
+
     return "\n\n".join(parts)
