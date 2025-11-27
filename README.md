@@ -1,18 +1,75 @@
-# React + Vite
+# Fazil Portfolio – React + AI Chatbot + FastAPI Backend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the source code for **Muhammad Fazil V K**’s personal portfolio website.
 
-Currently, two official plugins are available:
+It includes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A **React + Vite** frontend hosted on **Vercel**
+- A **FastAPI** backend hosted separately (e.g. **Render**) for an **AI-powered “Ask Me” chatbot**
+- A **page view counter** using **Vercel Analytics** plus a **Redis** store
+- A custom floating chatbot UI with polished CSS, icons, and animations
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🔧 Tech Stack
 
-Note: This will impact Vite dev & build performances.
+### Frontend
 
-## Expanding the ESLint configuration
+- **React** (with Vite)
+- **JavaScript / JSX**
+- **CSS** with custom styling (no UI library, hand-crafted layout)
+- **Bootstrap Icons** (where used)
+- **React Feather Icons** for some UI icons
+- Deployed on **Vercel**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+
+- **Python 3**
+- **FastAPI** (ASGI framework)
+- **Uvicorn** for serving
+- **scikit-learn** (TF–IDF based retrieval)
+- **NumPy**
+- **google-genai** – calls **Google Gemini** for LLM responses
+- Deployed on **Render** (or any Python-friendly host)
+
+### Analytics & Storage
+
+- **Vercel Analytics** for traffic insights
+- **Redis** (hosted) to store & retrieve total page view count
+
+---
+
+## 🏗 Project Structure
+
+At a high level:
+
+```bash
+Fazil_portfolio/
+  backend/            # FastAPI backend for AI chatbot
+    app/
+      api.py          # API routes (including /api/chat)
+      llm_client.py   # Gemini client wrapper
+      retrieval.py    # TF-IDF retrieval logic
+      embedder.py     # TF-IDF vectorizer
+      chunker.py      # Loads knowledge base chunks
+      ...
+    data/             # About/experience/projects/skills KB files
+    main.py           # FastAPI app entrypoint
+    requirements.txt  # Backend dependencies
+    .env              # (ignored) contains GEMINI_API_KEY (local only)
+
+  public/             # Static assets (favicon, sitemap, robots.txt)
+  src/
+    components/
+      Chatbot.jsx     # Floating AI chatbot widget
+      ...
+    styles/
+      Chatbot.css     # Chatbot styling, animations, layout
+      ...
+    main.jsx          # React/Vite entrypoint
+  package.json
+  vite.config.js
+  .gitignore
+  README.md
+
+

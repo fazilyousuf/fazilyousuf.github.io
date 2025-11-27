@@ -10,14 +10,17 @@ const initialMessages = [
   {
     id: 1,
     sender: "bot",
-    text: "Hi 👋, I'm your portfolio assistant. Ask me anything about Fazil, skills, or projects!",
+    text: "Hi 👋, I'm your assistant. Ask me anything about Fazil, skills, or projects!",
   },
 ];
+
+
 
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState(initialMessages);
   const [input, setInput] = useState("");
+  const [isThinking, setIsThinking] = useState(false);
 
   const toggleChat = () => setIsOpen((prev) => !prev);
 
@@ -35,6 +38,7 @@ function Chatbot() {
     // Add user message immediately
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
+    setIsThinking(true);
 
     try {
       const res = await fetch(`${API_BASE_URL}/api/chat`, {
@@ -64,7 +68,9 @@ function Chatbot() {
           "Sorry, something went wrong talking to the AI backend. Please try again in a moment.",
       };
       setMessages((prev) => [...prev, errorMsg]);
-    }
+    }finally {
+    setIsThinking(false); 
+  }
   };
 
   return (
@@ -81,7 +87,7 @@ function Chatbot() {
           <div className="chatbot-header">
             <div>
               <div className="chatbot-title">Ask Me</div>
-              <div className="chatbot-subtitle">Chat with Fazil’s assistant</div>
+              <div className="chatbot-subtitle">Chat with Fazil's AI assistant</div>
             </div>
             <button className="chatbot-close" onClick={toggleChat}>
               ✕
@@ -99,6 +105,15 @@ function Chatbot() {
                 <div className="chatbot-bubble">{msg.text}</div>
               </div>
             ))}
+            {isThinking && (
+    <div className="chatbot-message from-bot">
+      <div className="chatbot-bubble chatbot-typing">
+        <span className="typing-dot"></span>
+        <span className="typing-dot"></span>
+        <span className="typing-dot"></span>
+      </div>
+    </div>
+  )}
           </div>
 
           <form className="chatbot-input-area" onSubmit={handleSubmit}>
