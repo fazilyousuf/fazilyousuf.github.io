@@ -3,6 +3,7 @@ import Home from "@/pages/Home";
 import Service from "@/pages/Service";
 import About from "@/pages/About"
 import Experience from "@/pages/Experience";
+import Projects from "@/pages/Projects";
 import Education from "@/pages/Education";
 import Skills from "@/pages/Skills";
 import Contact from "@/pages/Contact";
@@ -19,6 +20,7 @@ function App() {
         <Service />
         <About />
         <Experience />
+        <Projects />
         <Education />
         <Skills />
         <Contact />

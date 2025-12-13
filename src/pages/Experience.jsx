@@ -20,6 +20,16 @@ const Experience = () => {
       </div>
 
       <div className="experience-container">
+
+        <div className="experience-card">
+          <div className="exp-left">
+            <p>Nov 2025 - Present</p>
+          </div>
+          <div className="exp-right">
+            <h3>Xavirgin Pvt Ltd </h3>
+            <p>AI/ML Team Lead</p>
+          </div>
+        </div>
         <div className="experience-card">
           <div className="exp-left">
             <p>Aug 2025 – Oct 2025</p>
@@ -29,15 +39,7 @@ const Experience = () => {
             <p>Jr. React Developer</p>
           </div>
         </div>
-        <div className="experience-card">
-          <div className="exp-left">
-            <p>Oct 2024 - Sep 2025</p>
-          </div>
-          <div className="exp-right">
-            <h3>Datavalley Web Services </h3>
-            <p>Fullstack Developer</p>
-          </div>
-        </div>
+        
         <div className="experience-card">
           <div className="exp-left">
             <p>Nov 2024 - Feb 2025</p>

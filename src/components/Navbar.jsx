@@ -11,25 +11,50 @@ const Navbar = () => {
     <nav className="navbar" aria-label="Primary">
       {/* Left side: number + Dubai */}
       <div className="navbar-left">
-        <a 
-  href="https://wa.me/971525959413" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="contact-number"
->
-  +971 52 595 9413
-</a>
+        <a
+          href="https://wa.me/971525959413"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-number"
+        >
+          +971 52 595 9413
+        </a>
 
         <span className="location">Dubai</span>
       </div>
 
       {/* Desktop nav links */}
       <ul className="nav-list">
-        <li className="nav-item"><a href="#home" className="nav-link">Home</a></li>
-        <li className="nav-item"><a href="#about" className="nav-link">About</a></li>
-        <li className="nav-item"><a href="#experience" className="nav-link">Experience</a></li>
-        <li className="nav-item"><a href="#education" className="nav-link">Education</a></li>
-        <li className="nav-item"><a href="#contact" className="nav-link">Contact</a></li>
+        <li className="nav-item">
+          <a href="#home" className="nav-link">
+            Home
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#about" className="nav-link">
+            About
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#experience" className="nav-link">
+            Experience
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#projects" className="nav-link">
+            Projects
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#education" className="nav-link">
+            Education
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#contact" className="nav-link">
+            Contact
+          </a>
+        </li>
       </ul>
 
       {/* Desktop: Connect button */}
@@ -52,11 +77,31 @@ const Navbar = () => {
       {/* Mobile dropdown menu */}
       {menuOpen && (
         <ul className="mobile-menu">
-          <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-          <li><a href="#about" onClick={toggleMenu}>About</a></li>
-          <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
-          <li><a href="#education" onClick={toggleMenu}>Education</a></li>
-          <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+          <li>
+            <a href="#home" onClick={toggleMenu}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={toggleMenu}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#experience" onClick={toggleMenu}>
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#education" onClick={toggleMenu}>
+              Education
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={toggleMenu}>
+              Contact
+            </a>
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/yousuffazil"

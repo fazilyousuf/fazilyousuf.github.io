@@ -71,7 +71,7 @@ Fazil_portfolio/
   vite.config.js
   .gitignore
   README.md
-
+---
 🤖 AI Chatbot – How It Works
 
 The chatbot is designed to answer questions about Fazil only (skills, projects, experience, contact, etc.). It uses a RAG-style (Retrieval-Augmented Generation) pipeline:

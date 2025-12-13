@@ -23,22 +23,22 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-block">
           <h4>Address</h4>
-          <p>Puthanpurayil, Cherandathur Vadakara, Kerala, India</p>
+          <p>Al Rashidiya, Dubai, United Arab Emirates</p>
         </div>
 
         <div className="footer-block">
-          <h4>Let's Talk</h4>
+          <h4>Let's Talk❤️</h4>
           <p>+91 9562011528</p>
           <p>+971 525959413</p>
         </div>
 
         <div className="footer-block">
-          <h4>Send Email</h4>
+          <h4>Email</h4>
           <p>
             <a href="mailto:muhammadfazilvk@gmail.com">muhammadfazilvk@gmail.com</a>
           </p>
           <p>
-            <a href="mailto:fazifazu01@gmail.com">fazifazu01@gmail.com</a>
+            <a href="mailto:fazilvkdev@gmail.com">fazilvkdev@gmail.com</a>
           </p>
         </div>
       </div>
