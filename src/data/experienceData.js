@@ -1,0 +1,91 @@
+// src/data/experienceData.js
+// Single source of truth for the Experience section.
+// Keep backend/data/experience.json in sync with this (see notes in chat).
+
+export const experiences = [
+  {
+    id: "agenticx",
+    role: "Consultant – AI & ML",
+    company: "AgenticX Knowledge Solutions LLP",
+    website: "https://agenticx.co.in",
+    period: "Apr 2026 – Sep 2026",
+    location: "Kollam, Kerala, India",
+    type: "AI Platform Engineering & Full-Stack Development",
+    summary:
+      "Rebuilt the entire AgenticX digital ecosystem from scratch as an API-first platform.",
+    highlights: [
+      "Redesigned and rebuilt the complete AgenticX ecosystem: public website, Admin CRM, Candidate Self-Service Portal and Certificate Verification Portal.",
+      "Architected a FastAPI REST backend with 120+ endpoints, async SQLAlchemy ORM and Pydantic v2 validation.",
+      "Implemented JWT-based role access control (admin and candidate scopes) to keep each portal's data isolated.",
+      "Deployed on Render with Gunicorn + Uvicorn (4 workers) for production-grade concurrency.",
+      "Built an automated PDF certificate engine (ReportLab) with JWT-signed QR verification and digital signatures, so anyone can validate a certificate publicly.",
+      "Integrated Razorpay live payments with HMAC-SHA256 webhook verification, admission-fee lifecycle tracking and auto-generated PDF receipts stored in Supabase Storage.",
+    ],
+    tech: ["FastAPI", "SQLAlchemy", "Pydantic v2", "PostgreSQL", "Supabase", "Razorpay", "ReportLab", "React", "Render"],
+    project: {
+      title: "Real-Time Student Proctoring System",
+      tag: "In-house project",
+      highlights: [
+        "Designed and deployed an online proctoring system used internally to evaluate students and interns, removing the need for manual supervision.",
+        "Migrated from a server-side stack (MediaPipe + fine-tuned CNN) to client-side TensorFlow.js, cutting server load by ~90%.",
+        "Runs BlazeFace face detection and COCO-SSD phone detection fully in the browser at ~95% real-time accuracy, 1 frame per 1.2s, with no server GPU needed.",
+        "Added 30-second anomaly batching and aggregation, cutting backend writes by ~70% and improving scalability under concurrent exams.",
+        "Built a modular React + Django API for anomaly alerts, with PostgreSQL storage.",
+      ],
+      tech: ["TensorFlow.js", "BlazeFace", "COCO-SSD", "React", "Django", "PostgreSQL"],
+    },
+  },
+  {
+    id: "xavirgin",
+    role: "AI/ML R&D Team Lead",
+    company: "Xavirgin (OPC) Private Limited",
+    period: "Nov 2025 – Apr 2026",
+    location: "Remote",
+    type: "Early-Stage AI Startup",
+    summary: "Led the AI/ML department and shipped in-house AI products end to end.",
+    highlights: [
+      "Led the AI/ML department, owning architecture, experimentation and end-to-end delivery of products built from scratch.",
+      "Architected a multi-tenant AI chatbot platform with client-aware RAG: a unified FastAPI pipeline (chunking, TF-IDF retrieval, Gemini orchestration).",
+      "Designed MongoDB Atlas-based client and knowledge-base routing with keyword-triggered custom workflows, prioritizing tenant isolation and minimal duplication.",
+      "Replaced Sentence-Transformers MiniLM + PyTorch embeddings with a lightweight TF-IDF retriever, cutting memory footprint for cheaper deployment.",
+      "Built a custom Gemini LLM client for structured, knowledge-base-grounded responses.",
+      "Built an on-device Indian-language STT system (Whisper.cpp) with Speechmatics and Sarvam fallbacks, tuned for South Indian language accuracy.",
+      "Directed full-stack delivery across client and internal projects (React, backend APIs) and worked with DevOps to stabilize CI/CD and improve deployment reliability.",
+    ],
+    tech: ["FastAPI", "Gemini", "TF-IDF RAG", "MongoDB Atlas", "Whisper.cpp", "React", "CI/CD"],
+  },
+  {
+    id: "greencreon",
+    role: "Jr. React Developer Intern",
+    company: "GreenCreon LLP Software Solutions",
+    period: "Aug 2025 – Oct 2025",
+    location: "Remote",
+    type: "In-House Billing Software",
+    summary: "Frontend developer on a React + Vite billing product, leading the intern team.",
+    highlights: [
+      "Worked as a frontend developer on the company's in-house billing software, built with React and Vite.",
+      "Led the intern team, guiding them on frontend best practices and code quality.",
+      "Developed reusable UI components and implemented routing and state management.",
+      "Built dynamic React frontends with Redux, improving performance and user experience.",
+      "Integrated backend REST APIs into the billing workflows.",
+    ],
+    tech: ["React", "Vite", "Redux", "REST APIs"],
+  },
+  {
+    id: "idatalytics",
+    role: "Data Science Intern",
+    company: "iDatalytics",
+    period: "Nov 2024 – Feb 2025",
+    location: "Kochi, Kerala, India",
+    type: "Applied Machine Learning",
+    summary: "Hands-on applied ML: from data analysis to deployed prediction APIs.",
+    highlights: [
+      "Applied Python and core ML libraries to data analysis, manipulation, preprocessing and model building.",
+      "Created Matplotlib and Seaborn visualizations that turned raw data into actionable insights.",
+      "Trained and deployed ML models using multiple algorithms for predictive analytics.",
+      "Built computer vision and NLP systems with MediaPipe, TensorFlow, OpenCV, NLTK and Transformers.",
+      "Exposed models through Flask APIs for scalable, efficient deployment.",
+    ],
+    tech: ["Python", "TensorFlow", "OpenCV", "MediaPipe", "NLTK", "Transformers", "Flask"],
+  },
+];
