@@ -1,54 +1,63 @@
-service-section {
+
+.service-section {
   width: 100%;
+  min-height: 100vh;
   background-color: var(--color-bg-main, #000);
   color: var(--color-text-primary, #fff);
-  padding: 64px 20px;
+  padding: 80px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .service-container {
-  max-width: 1000px;
   width: 100%;
-  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
 }
 
+/* Section heading */
 .service-heading-tag {
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color: var(--color-accent, #0ae8d2);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .service-container h3 {
-  font-size: 2.1rem;
+  font-size: clamp(1.85rem, 3.5vw, 2.25rem);
   font-weight: 700;
-  margin-bottom: 36px;
+  margin: 0 0 36px;
   line-height: 1.3;
-  color: #fff;
-  letter-spacing: -0.4px;
+  color: var(--color-text-primary, #fff);
+  letter-spacing: -0.5px;
 }
 
+/* Service cards */
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 24px;
   text-align: left;
 }
 
 .service-card {
+  min-width: 0;
+  box-sizing: border-box;
   background: var(--color-bg-card, rgba(255, 255, 255, 0.05));
   border: 1px solid var(--color-border-card, rgba(255, 255, 255, 0.1));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 26px 22px;
+  padding: 28px;
   border-radius: 14px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.25s ease,
     box-shadow 0.25s ease;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -57,65 +66,95 @@ service-section {
 .service-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-accent-border, rgba(10, 232, 210, 0.4));
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45),
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.45),
     0 2px 18px var(--color-accent-glow, rgba(10, 232, 210, 0.18));
 }
 
 .service-title {
-  color: #fff;
+  color: var(--color-text-primary, #fff);
   font-weight: 700;
-  font-size: 1.2rem;
-  margin: 0 0 4px 0;
+  font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+  margin: 0 0 4px;
+  line-height: 1.3;
 }
 
 .service-subtitle {
   color: var(--color-accent, #0ae8d2);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 .service-desc {
   color: var(--color-text-secondary, rgba(255, 255, 255, 0.8));
-  font-size: 0.85rem;
+  font-size: clamp(0.9rem, 1.2vw, 0.95rem);
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
   flex: 1;
 }
 
 .service-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
   margin-top: auto;
-  padding-top: 12px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .service-tag {
   background: var(--color-accent-chip, rgba(10, 232, 210, 0.12));
   border: 1px solid rgba(10, 232, 210, 0.2);
-  padding: 3px 8px;
+  padding: 4px 9px;
   border-radius: 5px;
   color: var(--color-accent, #0ae8d2);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
-/* Responsive */
+/* Tablet */
+@media (max-width: 1024px) {
+  .service-section {
+    padding: 70px 24px;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .service-section {
-    padding: 48px 16px;
+    min-height: auto;
+    padding: 60px 16px;
   }
 
   .service-container h3 {
-    font-size: 1.65rem;
-    margin-bottom: 24px;
+    font-size: clamp(1.65rem, 4.5vw, 1.85rem);
+    margin-bottom: 28px;
   }
 
   .service-cards {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 22px 20px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .service-section {
+    padding: 48px 12px;
+  }
+
+  .service-container h3 {
+    font-size: clamp(1.45rem, 6vw, 1.65rem);
   }
 
   .service-card {
@@ -123,21 +162,13 @@ service-section {
   }
 }
 
-@media (max-width: 480px) {
-  .service-section {
-    padding: 36px 12px;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
   }
 
-  .service-container h3 {
-    font-size: 1.45rem;
-  }
-
-  .service-title {
-    font-size: 1.1rem;
-  }
-
-  .service-desc {
-    font-size: 0.82rem;
+  .service-card:hover {
+    transform: none;
   }
 }
-
