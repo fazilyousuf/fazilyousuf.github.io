@@ -59,70 +59,67 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact-section">
-      {/* Centered wrapper — same max-width as all other sections */}
-      <div className="contact-wrapper">
-        {/* Left side */}
-        <div className="contact-left">
-          <div className="image-slider hover-glass">
-            <img src={images[current]} alt="Profile" className="profile-img" />
-            <button className="nav-btn left" onClick={prevImage}>
-              <FaArrowLeft />
-            </button>
-            <button className="nav-btn right" onClick={nextImage}>
-              <FaArrowRight />
-            </button>
-          </div>
-
-          {/* Completed Projects */}
-          <div className="project-card">
-            <img src={projectLogo} alt="project" />
-            <p><span className="project-count">5+</span> Completed Projects</p>
-          </div>
+      {/* Left side */}
+      <div className="contact-left">
+        <div className="image-slider hover-glass">
+          <img src={images[current]} alt="Profile" className="profile-img" />
+          <button className="nav-btn left" onClick={prevImage}>
+            <FaArrowLeft />
+          </button>
+          <button className="nav-btn right" onClick={nextImage}>
+            <FaArrowRight />
+          </button>
         </div>
 
-        {/* Right side */}
-        <div className="contact-right glass hover-glass">
-          <h2>CONNECT WITH ME</h2>
-          <p>
-            If you have any questions or would like to connect, don't hesitate to
-            get in touch. I'm eager to explore new opportunities and engage in
-            meaningful discussions.
-          </p>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows="4"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-            <button type="submit">Submit</button>
-          </form>
+        {/* Completed Projects */}
+        <div className="project-card">
+          <img src={projectLogo} alt="project" />
+          <p><span className="project-count">5+</span> Completed Projects</p>
         </div>
+      </div>
+
+      {/* Right side */}
+      <div className="contact-right glass hover-glass">
+        <h2>CONNECT WITH ME</h2>
+        <p>
+          If you have any questions or would like to connect, don't hesitate to
+          get in touch. I'm eager to explore new opportunities and engage in
+          meaningful discussions.
+        </p>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="4"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </section>
   );
