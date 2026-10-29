@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "@/styles/footer.css";
 import { FaLinkedin, FaGithub, FaInstagram, FaArrowUp } from "react-icons/fa";
+import { contactInfo } from "@/data/contactData";
 
 const Footer = () => {
-
   const [visits, setVisits] = useState(null);
 
   useEffect(() => {
@@ -23,50 +23,61 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-block">
           <h4>Address</h4>
-          <p>Al Rashidiya, Dubai, United Arab Emirates</p>
+          <p>{contactInfo.location}</p>
         </div>
 
         <div className="footer-block">
-          <h4>Let's Talk❤️</h4>
-          <p>+91 9562011528</p>
-          <p>+971 525959413</p>
+          <h4>Let's Talk</h4>
+          <p>
+            <a href={`tel:${contactInfo.phonePrimary.replace(/\s+/g, "")}`}>
+              {contactInfo.phonePrimary} (UAE)
+            </a>
+          </p>
+          <p>
+            <a href={`tel:${contactInfo.phoneSecondary.replace(/\s+/g, "")}`}>
+              {contactInfo.phoneSecondary} (IN)
+            </a>
+          </p>
         </div>
 
         <div className="footer-block">
           <h4>Email</h4>
           <p>
-            <a href="mailto:muhammadfazilvk@gmail.com">muhammadfazilvk@gmail.com</a>
+            <a href={`mailto:${contactInfo.emailPrimary}`}>{contactInfo.emailPrimary}</a>
           </p>
           <p>
-            <a href="mailto:fazilvkdev@gmail.com">fazilvkdev@gmail.com</a>
+            <a href={`mailto:${contactInfo.emailSecondary}`}>{contactInfo.emailSecondary}</a>
           </p>
         </div>
       </div>
 
       {/* Bottom row: Copyright + Social Icons */}
       <div className="footer-bottom">
-        <p>© Muhammad Fazil V K | All Rights Reserved</p>
+        <p>© {contactInfo.name} | All Rights Reserved</p>
 
         {/* Social media */}
         <div className="footer-social">
           <a
-            href="https://www.linkedin.com/in/yousuffazil"
+            href={contactInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
           >
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/fazilyousuf"
+            href={contactInfo.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub Profile"
           >
             <FaGithub />
           </a>
           <a
-            href="https://www.instagram.com/yousuf_fazil__"
+            href={contactInfo.instagram}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram Profile"
           >
             <FaInstagram />
           </a>
@@ -75,7 +86,7 @@ const Footer = () => {
       </div>
 
       {/* Back to top button */}
-      <button className="back-to-top" onClick={scrollToTop}>
+      <button className="back-to-top" onClick={scrollToTop} aria-label="Back to top">
         <FaArrowUp />
       </button>
     </footer>
