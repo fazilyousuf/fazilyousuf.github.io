@@ -19,7 +19,7 @@ export const projects = [
   {
     id: "agenticx-candidate-portal",
     title: "Candidate Self-Service Portal",
-    domain: "candidate.agenticx.in",
+    domain: "candidate.agenticx.co.in",
     image: agenticxCandidateImg,
     badge: "Student Portal",
     description:
@@ -43,7 +43,7 @@ export const projects = [
   {
     id: "agenticx-backend-api",
     title: "Central FastAPI Backend Engine",
-    domain: "api.agenticx.in",
+    domain: "api.agenticx.co.in",
     image: agenticxApiImg,
     badge: "Unified Backend Engine",
     description:
