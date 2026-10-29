@@ -1,59 +1,50 @@
 [
   {
-    "title": "Falcon 9 Landing Prediction",
-    "description": "Capstone project: predicted Falcon 9 first stage landing success using data wrangling, feature engineering, and machine learning models.",
-    "tech_stack": ["Python", "Pandas", "Scikit-learn", "SQL", "Plotly", "Jupyter", "APIs"],
-    "features": [""]
-  },
-  {
-    "title": "Stock vs Revenue Dashboard",
-    "description": "Compared Tesla and GameStop stock prices with revenue using web scraping and interactive dashboards.",
-    "tech_stack": ["Python", "Pandas", "BeautifulSoup", "Plotly", "Dashboards"],
-    "features": [""]
-  },
-  {
-    "title": "IncTra  Personal Budget Tracker",
-    "description": "A full-stack budget management system built using React and Django REST Framework. Allows users to track income, expenses, budgets, and financial insights.",
-    "tech_stack": ["React", "Django REST Framework", "D3.js", "SQLite3", "Token-based authentication"],
+    "title": "AgenticX Official Website",
+    "description": "The primary public digital platform and corporate gateway for AgenticX Knowledge Solutions (agenticx.co.in). Features dynamic course discovery, enterprise AI tracks, admissions workflows, and unified access to the AgenticX ecosystem.",
+    "tech_stack": ["React", "Vite", "JavaScript", "HTML5", "CSS3", "REST APIs", "Vercel"],
     "features": [
-      "Interactive dashboards with D3.js visualizations.",
-      "Monthly budget allocation vs actual spending comparison.",
-      "Daily income/expense graph for 5-day periods.",
-      "CRUD operations for transaction management.",
-      "Category-wise budget limits with progress tracking."
+      "Live at https://agenticx.co.in",
+      "Corporate showcase for AI & ML consulting, internship programs, and certifications.",
+      "Responsive, modern UI designed for desktop and mobile.",
+      "Integration with AgenticX centralized backend APIs for admissions and inquiries."
     ]
   },
   {
-    "title": "Interview Proctoring System",
-    "description": "A monitoring system to ensure fairness in online interviews using computer vision and deep learning.",
-    "tech_stack": ["MediaPipe", "OpenCV", "TensorFlow", "Flask", "HTML/CSS"],
+    "title": "AgenticX Candidate Self-Service Portal",
+    "description": "Dedicated self-service platform for candidates and interns (candidate.agenticx.in). Handles student onboarding, admissions, training track progress, Razorpay fee payments with webhook verification, and automated PDF receipts stored in Supabase.",
+    "tech_stack": ["React", "Vite", "JWT Auth", "Razorpay", "Supabase Storage", "REST APIs"],
     "features": [
-      "Face and multiple-face detection using MediaPipe Face Mesh.",
-      "Eye movement and lip movement detection for candidate verification.",
-      "Real-time anomaly detection and logging.",
-      "Custom-trained ML model detecting phones and smartwatches with 85% accuracy.",
-      "Deployed backend with Flask; frontend being migrated to React."
+      "Live at https://candidate.agenticx.in",
+      "JWT-based candidate authentication and role-isolated data access.",
+      "Razorpay live payment gateway integration with HMAC-SHA256 signature verification.",
+      "Instant admission fee receipt generation and storage.",
+      "Personalized learning track and training milestone tracking."
     ]
   },
   {
-    "title": "Scientific Literature Summarizer",
-    "description": "NLP-based application for generating concise summaries of research papers.",
-    "tech_stack": ["Python", "NLP", "BERT", "MongoDB", "Flask", "HTML/CSS"],
+    "title": "AgenticX Certificate Verification Portal",
+    "description": "Public verification system enabling instant, tamper-proof validation of AgenticX-issued certificates (certificate.agenticx.in). Features automated digital signatures, JWT-signed cryptographic QR verification, and high-speed lookup.",
+    "tech_stack": ["React", "Vite", "JWT Verification", "QR Code Engine", "ReportLab", "REST APIs"],
     "features": [
-      "Advanced text preprocessing and summarization pipeline.",
-      "BERT-based summary generation.",
-      "Flask backend with interactive web UI.",
-      "Database integration for storing documents and summaries."
+      "Live at https://certificate.agenticx.in",
+      "Instant public validation by certificate ID or scanning QR code.",
+      "Cryptographic JWT-signed QR codes to prevent forgery and tampering.",
+      "ReportLab engine integration for verified PDF certificate rendering."
     ]
   },
   {
-    "title": "Portal for Agribusiness",
-    "description": "Platform enabling direct farmer-to-consumer market interactions.",
-    "tech_stack": ["Django", "SQLite3", "HTML", "CSS", "JavaScript"],
+    "title": "AgenticX All-in-One Central FastAPI Backend Engine",
+    "description": "High-concurrency, asynchronous FastAPI REST engine serving the entire AgenticX ecosystem (api.agenticx.in). Houses 120+ endpoints, async SQLAlchemy ORM, Pydantic v2 validation, JWT role-based access control, Razorpay payment webhooks, and automated PDF engines.",
+    "tech_stack": ["FastAPI", "Python", "SQLAlchemy", "PostgreSQL", "Pydantic v2", "Razorpay", "ReportLab", "Supabase", "Render"],
     "features": [
-      "MVC architecture using Django.",
-      "Dynamic product, user, and order management.",
-      "Secure product listing and purchasing workflow."
+      "API documentation at https://api.agenticx.in/docs",
+      "Unified backend powering agenticx.co.in, candidate.agenticx.in, and certificate.agenticx.in.",
+      "120+ REST endpoints with async SQLAlchemy ORM and PostgreSQL.",
+      "Pydantic v2 schemas for robust request and response validation.",
+      "JWT-based role access control (admin and candidate scopes).",
+      "Production deployment on Render with Gunicorn and Uvicorn workers."
     ]
   }
 ]
+

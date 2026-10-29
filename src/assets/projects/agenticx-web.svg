@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradWeb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e14" />
+      <stop offset="50%" stop-color="#0c1722" />
+      <stop offset="100%" stop-color="#050a0f" />
+    </linearGradient>
+    <linearGradient id="cyanGradWeb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ae8d2" />
+      <stop offset="100%" stop-color="#00a896" />
+    </linearGradient>
+    <filter id="glowWeb" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bgGradWeb)" />
+
+  <g stroke="rgba(10, 232, 210, 0.07)" stroke-width="1">
+    <line x1="0" y1="68" x2="600" y2="68" />
+    <line x1="0" y1="136" x2="600" y2="136" />
+    <line x1="0" y1="204" x2="600" y2="204" />
+    <line x1="0" y1="272" x2="600" y2="272" />
+    <line x1="120" y1="0" x2="120" y2="340" />
+    <line x1="240" y1="0" x2="240" y2="340" />
+    <line x1="360" y1="0" x2="360" y2="340" />
+    <line x1="480" y1="0" x2="480" y2="340" />
+  </g>
+
+  <circle cx="300" cy="150" r="120" fill="rgba(10, 232, 210, 0.08)" filter="url(#glowWeb)" />
+
+  <g transform="translate(130, 45)">
+    <rect x="0" y="0" width="340" height="210" rx="12" fill="#0d1b26" stroke="rgba(10, 232, 210, 0.3)" stroke-width="1.5" />
+    <rect x="0" y="0" width="340" height="34" rx="12" fill="#08121a" />
+    <rect x="0" y="24" width="340" height="10" fill="#08121a" />
+    <circle cx="18" cy="17" r="4.5" fill="#ff5f56" />
+    <circle cx="32" cy="17" r="4.5" fill="#ffbd2e" />
+    <circle cx="46" cy="17" r="4.5" fill="#27c93f" />
+    <rect x="70" y="8" width="200" height="18" rx="5" fill="rgba(10, 232, 210, 0.08)" stroke="rgba(10, 232, 210, 0.2)" stroke-width="1" />
+    <text x="170" y="21" fill="#0ae8d2" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">https://agenticx.co.in</text>
+
+    <rect x="30" y="55" width="130" height="12" rx="3" fill="url(#cyanGradWeb)" />
+    <rect x="30" y="75" width="180" height="6" rx="2" fill="rgba(255, 255, 255, 0.4)" />
+    <rect x="30" y="87" width="150" height="6" rx="2" fill="rgba(255, 255, 255, 0.25)" />
+    <rect x="30" y="105" width="60" height="18" rx="4" fill="#0ae8d2" />
+    
+    <rect x="230" y="55" width="80" height="70" rx="8" fill="rgba(10, 232, 210, 0.12)" stroke="rgba(10, 232, 210, 0.3)" />
+    <polygon points="270,75 285,100 255,100" fill="#0ae8d2" opacity="0.8" />
+    <circle cx="280" cy="72" r="6" fill="#0ae8d2" opacity="0.6" />
+
+    <rect x="30" y="145" width="80" height="42" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" />
+    <rect x="130" y="145" width="80" height="42" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" />
+    <rect x="230" y="145" width="80" height="42" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" />
+  </g>
+
+  <text x="300" y="295" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5" text-anchor="middle">AGENTICX MAIN WEBSITE</text>
+  <text x="300" y="316" fill="#0ae8d2" font-family="system-ui, sans-serif" font-size="12" font-weight="500" letter-spacing="1" text-anchor="middle">agenticx.co.in</text>
+</svg>
