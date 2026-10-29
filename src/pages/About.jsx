@@ -1,15 +1,16 @@
 import React from "react";
 import "@/styles/about.css";
+import { aboutData } from "@/data/aboutData";
 
 const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="about-container">
-        <h2>About Me</h2>
+        <h2>{aboutData.sectionTitle}</h2>
         <div className="about-subtitle">
-          <p>Hey there!</p>
-          <p>I help businesses go digital</p>
-          <p>Transforming ideas into digital realities</p>
+          {aboutData.subtitles.map((sub, idx) => (
+            <p key={idx}>{sub}</p>
+          ))}
         </div>
 
         <div className="about-content">
@@ -24,12 +25,7 @@ const About = () => {
 
           {/* Right Section: Description */}
           <div className="about-right">
-            <p>
-              Hello there! I'm Muhammad Fazil V K, passionate about creating intuitive digital
-              experiences, blending strong design principles with a keen eye for detail. I'm skilled
-              in React, Python and Django, with a deep interest in machine learning and data science, always
-              exploring new ways to innovate.
-            </p>
+            <p>{aboutData.bio}</p>
           </div>
         </div>
       </div>

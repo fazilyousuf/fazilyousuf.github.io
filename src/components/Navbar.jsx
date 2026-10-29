@@ -1,66 +1,61 @@
 import React, { useState } from "react";
 import "@/styles/navbar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { contactInfo } from "@/data/contactData";
+
+const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#service" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Education", href: "#education" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="navbar" aria-label="Primary">
-      {/* Left side: number + Dubai */}
+    <nav className="navbar" aria-label="Primary navigation">
+      {/* Left side: Location badge + WhatsApp */}
       <div className="navbar-left">
+        <div className="location-badge">
+          <span className="location-dot" aria-hidden="true" />
+          <span>Dubai, UAE</span>
+        </div>
+
         <a
-          href="https://wa.me/971525959413"
+          href={contactInfo.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="contact-number"
+          aria-label={`Contact on WhatsApp: ${contactInfo.phonePrimary}`}
         >
-          +971 52 595 9413
+          <FaWhatsapp aria-hidden="true" />
+          <span>{contactInfo.phonePrimary}</span>
         </a>
-
-        <span className="location">Dubai</span>
       </div>
 
       {/* Desktop nav links */}
       <ul className="nav-list">
-        <li className="nav-item">
-          <a href="#home" className="nav-link">
-            Home
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#about" className="nav-link">
-            About
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#experience" className="nav-link">
-            Experience
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#projects" className="nav-link">
-            Projects
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#education" className="nav-link">
-            Education
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#contact" className="nav-link">
-            Contact
-          </a>
-        </li>
+        {navLinks.map((link) => (
+          <li className="nav-item" key={link.href}>
+            <a href={link.href} className="nav-link">
+              {link.label}
+            </a>
+          </li>
+        ))}
       </ul>
 
       {/* Desktop: Connect button */}
       <div className="navbar-right">
         <a
-          href="https://www.linkedin.com/in/yousuffazil"
+          href={contactInfo.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="connect-btn"
@@ -69,46 +64,34 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Hamburger menu (mobile only) */}
-      <div className="hamburger" onClick={toggleMenu}>
+      {/* Hamburger button (mobile only) */}
+      <button
+        type="button"
+        className="hamburger"
+        onClick={toggleMenu}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+      >
         {menuOpen ? <FaTimes /> : <FaBars />}
-      </div>
+      </button>
 
       {/* Mobile dropdown menu */}
       {menuOpen && (
         <ul className="mobile-menu">
-          <li>
-            <a href="#home" onClick={toggleMenu}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={toggleMenu}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#experience" onClick={toggleMenu}>
-              Experience
-            </a>
-          </li>
-          <li>
-            <a href="#education" onClick={toggleMenu}>
-              Education
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={toggleMenu}>
-              Contact
-            </a>
-          </li>
-          <li>
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li className="mobile-connect-item">
             <a
-              href="https://www.linkedin.com/in/yousuffazil"
+              href={contactInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="connect-btn"
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               Let’s Connect
             </a>
