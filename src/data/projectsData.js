@@ -25,19 +25,19 @@ export const projects = [
     description:
       "Dedicated self-service platform for enrolled candidates and interns. Handles student onboarding, admissions, training track progress, Razorpay fee payments with webhook verification, and automated PDF receipts.",
     tech: ["React", "Vite", "JWT Auth", "Razorpay", "Supabase Storage", "REST APIs"],
-    live: "https://candidate.agenticx.in",
+    live: "https://candidate.agenticx.co.in",
     buttonLabel: "Open Portal",
   },
   {
     id: "agenticx-certificate-portal",
     title: "Certificate Verification Portal",
-    domain: "certificate.agenticx.in",
+    domain: "certificate.agenticx.co.in",
     image: agenticxCertImg,
     badge: "Verification System",
     description:
       "Public verification system enabling instant, tamper-proof validation of AgenticX-issued certificates. Features automated digital signatures, JWT-signed cryptographic QR verification, and cloud lookup.",
     tech: ["React", "Vite", "JWT Verification", "QR Engine", "ReportLab", "REST APIs"],
-    live: "https://certificate.agenticx.in",
+    live: "https://certificate.agenticx.co.in",
     buttonLabel: "Verify Certificate",
   },
   {
@@ -49,9 +49,9 @@ export const projects = [
     description:
       "High-throughput, asynchronous FastAPI REST engine serving the entire AgenticX ecosystem. Houses 120+ endpoints, async SQLAlchemy ORM, Pydantic v2 validation, JWT role-based access control, Razorpay payment webhooks, and ReportLab PDF automation.",
     tech: ["FastAPI", "Python", "SQLAlchemy", "PostgreSQL", "Pydantic v2", "Razorpay", "ReportLab", "Render"],
-    live: "https://api.agenticx.in/docs",
+    live: "https://api.agenticx.co.in/docs",
     buttonLabel: "API Docs",
-    altLink: "https://api.agenticx.in",
+    altLink: "https://api.agenticx.co.in",
     altLabel: "API Server",
   },
 ];
